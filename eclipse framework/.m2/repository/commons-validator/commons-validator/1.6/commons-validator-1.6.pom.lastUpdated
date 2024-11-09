@@ -1,0 +1,7 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Feb 26 12:06:24 IST 2019
+@default-smartbear-sweden-plugin-repository-http\://www.soapui.org/repository/maven2/.lastUpdated=1551162984253
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551162984699
+https\://repository-saucelabs.forge.cloudbees.com/release/.lastUpdated=1551162983233
+http\://www.soapui.org/repository/maven2/.error=Could not transfer artifact commons-validator\:commons-validator\:pom\:1.6 from/to smartbear-sweden-plugin-repository (http\://www.soapui.org/repository/maven2/)\: Failed to connect to www.soapui.org/50.57.35.134\:80
+https\://repository-saucelabs.forge.cloudbees.com/release/.error=

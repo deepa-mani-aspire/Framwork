@@ -1,0 +1,9 @@
+package com.davinci.pages;
+
+public class AdministrativeHistoryOverviewPage {
+
+	public AdministrativeHistoryOverviewPage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

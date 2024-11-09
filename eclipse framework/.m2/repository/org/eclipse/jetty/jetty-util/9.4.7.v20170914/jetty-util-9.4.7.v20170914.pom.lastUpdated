@@ -1,0 +1,7 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Feb 26 12:08:42 IST 2019
+@default-smartbear-sweden-plugin-repository-http\://www.soapui.org/repository/maven2/.lastUpdated=1551163122088
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551163122531
+https\://repository-saucelabs.forge.cloudbees.com/release/.lastUpdated=1551163121059
+http\://www.soapui.org/repository/maven2/.error=Could not transfer artifact org.eclipse.jetty\:jetty-util\:pom\:9.4.7.v20170914 from/to smartbear-sweden-plugin-repository (http\://www.soapui.org/repository/maven2/)\: Failed to connect to www.soapui.org/50.57.35.134\:80
+https\://repository-saucelabs.forge.cloudbees.com/release/.error=

@@ -1,0 +1,7 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Feb 26 12:10:24 IST 2019
+@default-smartbear-sweden-plugin-repository-http\://www.soapui.org/repository/maven2/.lastUpdated=1551163223821
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551163224283
+https\://repository-saucelabs.forge.cloudbees.com/release/.lastUpdated=1551163222794
+http\://www.soapui.org/repository/maven2/.error=Could not transfer artifact org.apache.poi\:poi-ooxml-schemas\:pom\:3.9 from/to smartbear-sweden-plugin-repository (http\://www.soapui.org/repository/maven2/)\: Failed to connect to www.soapui.org/50.57.35.134\:80
+https\://repository-saucelabs.forge.cloudbees.com/release/.error=

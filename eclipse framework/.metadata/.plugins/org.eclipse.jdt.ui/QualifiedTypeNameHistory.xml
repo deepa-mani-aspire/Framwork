@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.davinci.pages.SelectSessionPage"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By.ByLinkText"/>
+<fullyQualifiedTypeName name="com.davinci.pages.SearchByToLetPage"/>
+<fullyQualifiedTypeName name="com.davinci.pages.LinkDirtyPaymentsPage"/>
+<fullyQualifiedTypeName name="com.davinci.pages.ViewLinkDirtyPaymentsPage"/>
+<fullyQualifiedTypeName name="com.davinci.pages.ValidatePaymentsPage"/>
+<fullyQualifiedTypeName name="com.davinci.pages.ViewMortgageDossierRequestsPage"/>
+<fullyQualifiedTypeName name="com.davinci.pages.SearchDeclarationsPage"/>
+<fullyQualifiedTypeName name="com.davinci.pages.AdministrativeHistoryOverviewPage"/>
+<fullyQualifiedTypeName name="com.davinci.pages.SearchIncomingPaymentsPage"/>
+</qualifiedTypeNameHistroy>

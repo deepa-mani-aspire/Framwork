@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+
+	function hideTestDetails() {
+	
+		 $("tr[class^='skip'] a:not(:visible),tr[class^='pass'] a:not(:visible),tr[class^='failed'] a:not(:visible)").each(function() {
+				$($(this).get(0).getAttribute("href")).hide();
+				$($(this).get(0).getAttribute("href")).next().hide();
+				$($(this).get(0).getAttribute("href")).next().next().hide();
+			 });
+			 
+	}
+	
+	function showTestDetails() {
+	
+		 $("tr[class^='skip'] a:visible,tr[class^='pass'] a:visible,tr[class^='failed'] a:visible").each(function() {
+					$($(this).get(0).getAttribute("href")).show();
+					$($(this).get(0).getAttribute("href")).next().show();
+					$($(this).get(0).getAttribute("href")).next().next().show();
+			 });
+	}
+	$(document).ready(function(){
+	
+		//Change Titles for Suite & Summary Table headers
+		$("table[id='suitesummary']").find("th").eq(4).text("Total Duration");
+		$("table[id='summary']").find("thead th").eq(0).text("Test Suites");
+		$("table[id='summary']").find("thead th").eq(1).text("Test Cases");
+		$("table[id='summary']").find("thead th").eq(3).text("Time");
+		$("table[id='suitesummary']").find("tr td:nth-last-of-type(1),th:nth-last-of-type(1)").hide();
+		$("table[id='suitesummary']").find("tr td:nth-last-of-type(2),th:nth-last-of-type(2):eq(0)").hide();
+	
+		$("<th>Pass/Fail</th>").insertBefore($("table[id='summary']").find("th:nth-last-of-type(2)"))
+		$("table[id='summary']").find("tr[class^='pass'] td:nth-last-of-type(2)").each(function() {
+		
+			if ($(this).get(0).getAttribute("rowSpan") != null)
+				$("<td valign=center align=center bgcolor=#00FF00 rowSpan=" + $(this).get(0).getAttribute("rowSpan") + "><b>Pass</b></td>").insertBefore($(this));
+			else
+				$("<td valign=center align=center bgcolor=#00FF00><b>Pass</b></td>").insertBefore($(this));
+		});
+		
+		$("table[id='summary']").find("tr[class^='fail'] td:nth-last-of-type(2)").each(function() {
+		
+			if ($(this).get(0).getAttribute("rowSpan") != null)
+				$("<td valign=center align=center bgcolor=#F00000 rowSpan=" + $(this).get(0).getAttribute("rowSpan") + "><b>Fail</b></td>").insertBefore($(this))
+			else
+				$("<td valign=center align=center bgcolor=#F00000><b>Fail</b></td>").insertBefore($(this));
+		});
+
+		$("table[id='summary']").find("tr[class^='skip'] td:nth-last-of-type(2)").each(function() {
+		
+			if ($(this).get(0).getAttribute("rowSpan") != null)
+				$("<td valign=center align=center bgcolor=#DDDDDD rowSpan=" + $(this).get(0).getAttribute("rowSpan") + "><b>Skip</b></td>").insertBefore($(this))
+			else
+				$("<td valign=center align=center bgcolor=#DDDDDD><b>Skip</b></td>").insertBefore($(this));
+		});
+
+		$('a').css('textDecoration','none') //hide hyperlinks underline
+		$("body>table:nth-of-type(2) th[colspan]").hide() //Hide site table row headers pass, fail , skip
+	
+		//Test Start
+		$($("table[id='summary']").find("tr[class]")).find("td:last").prev().each(function() {
+           var time = new Date($(this).text()/1);
+           time = (time.getHours()<10?"0"+time.getHours():time.getHours()) + ":" + (time.getMinutes()<10?"0"+time.getMinutes():time.getMinutes()) + ":" + (time.getSeconds()<10?"0"+time.getSeconds():time.getSeconds());
+            $(this).text(time);
+         });
+
+		
+		//Test Run Duration
+		$("table[id='summary']").find("tr[class]").each(function() {
+			if ($(this).find("td").length >=3) {
+				var time = new Date($(this).find("td:last").text()/1);
+				time = (time.getUTCMinutes()<10?"0"+time.getUTCMinutes():time.getUTCMinutes()) + ":" + (time.getUTCSeconds()<10?"0"+time.getUTCSeconds():time.getUTCSeconds());
+				$($(this).find("td:last").get(0)).text(time);
+			}
+		});
+	
+		//Test Suite Run Duration - Top Table
+		$($("table[id='suitesummary']").find("tr")).find("td:nth-of-type(5)").each(function() {
+			var time = $(this).text();
+			time = time.replace(/,/g, "");
+			var time = new Date(time/1);
+			time = (time.getUTCHours()<10?"0"+time.getUTCHours():time.getUTCHours()) + ":" + (time.getUTCMinutes()<10?"0"+time.getUTCMinutes():time.getUTCMinutes()) + ":" + (time.getUTCSeconds()<10?"0"+time.getUTCSeconds():time.getUTCSeconds());
+			$(this).text(time);
+		});
+		
+		//Test Suite Total Duration
+		var time = $("table[id='suitesummary']").get(0).getAttribute("duration");
+		time = new Date(time/1);
+		time = (time.getUTCHours()<10?"0"+time.getUTCHours():time.getUTCHours()) + ":" + (time.getUTCMinutes()<10?"0"+time.getUTCMinutes():time.getUTCMinutes()) + ":" + (time.getUTCSeconds()<10?"0"+time.getUTCSeconds():time.getUTCSeconds());
+		$("table[id='suitesummary']").find("th:last").prev().text(time);
+	
+		var header = "<hr size=3 noshade><h2 align=center>" + $("table:eq(0) tr:nth-of-type(2) th:first").text() + "</h2><hr size=3 noshade><br>"
+		$(header).insertBefore($("table").get(0));
+		$("<h3>Suite Summary:</h3>").insertBefore($("table").get(0));
+		$("<br><h3>Test Case Summary:</h3>").insertBefore($("table").get(1));
+	});
+	
+	
+	/*
+	 * Displays only the test case summary of clicked suite
+	 */
+	$(document).ready(function(){
+		  
+		$("a[href^='#t']").parent().click(function(){
+			
+			$("tbody[id^='t']").hide();
+			var tgtTable = $($($(this).get(0)).children("a").get(0).getAttribute("href"));
+			$(tgtTable).show();
+			$(tgtTable).find("tr").each(function() {
+				$(this).show();
+			});
+			hideTestDetails();
+		 	showTestDetails();
+			 
+		});
+	
+		//Preventing click of suite hyper link so function to hide other suite summary is not called
+		$("a[href^='#t']").click(function(e){
+			  e.stopPropagation();
+		 });
+	
+	});
+	
+	/*
+	 * Double click shows all test cases summary
+	 */
+	 
+	 $(document).ready(function(){
+		 
+		 $("table[id='suitesummary']").dblclick(function(){
+			
+		 	$("tbody[id^='t']").show();
+		 	$("tr[class^='failed']").show();
+		 	$("tr[class^='skip']").show();
+		 	$("tr[class^='pass']").show();
+		 
+			hideTestDetails();
+		 	showTestDetails();
+
+		});
+		
+	});
+		
+	 $(document).ready(function(){
+		 
+		 $("table:eq(0) tr:last th:first").click(function(){
+			 $("table[id='suitesummary']").trigger("dblclick");
+
+		});
+		
+	});
+
+	 /*
+	 * Display only pass/skip/fail cases
+	 */
+	$(document).ready(function(){
+		
+		$("td[class^='num'],th[class^='num']").click(function(){
+		  	
+		  	var col = $(this).index();
+		  	var row = $(this).closest("tr");
+		 	$($(row).find("td,th").get(0)).trigger("click");
+		  	
+		  	if (col == 1) {
+				$("tr[class^='failed']").hide();
+				$("tr[class^='skip']").hide();
+				$("tr[class^='pass']").show();
+			}
+		
+			if (col == 2) {
+				$("tr[class^='failed']").hide();
+			 	$("tr[class^='pass']").hide();
+				$("tr[class^='skip']").show();
+		  	}
+		
+		  	if (col == 3) {
+			  	$("tr[class^='skip']").hide();
+			 	$("tr[class^='pass']").hide();
+				$("tr[class^='failed']").show();
+			}
+		
+			hideTestDetails();
+		 	showTestDetails();
+		});
+
+
+	});
+		
+	/*
+	 * Shows test events on key press of ctrl+alt+e
+	 */
+	$(document).keypress("e", function(e) {
+		  if(e.altKey && e.ctrlKey)
+			  $("div[class='test-event']").fadeToggle(500);
+		});
+
+</script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">
+	table {margin-bottom:10px;border-collapse:collapse;empty-cells:show; border: 2px solid;}
+	body>table:nth-of-type(1) {width: 30%}
+	body>table:nth-of-type(2) {width: 75%}
+	th {border:1px solid #000000;padding:.75em .5em; } 
+	td {border:1px solid #000000;padding:.35em .5em; }
+	th {border-bottom: 2px solid; border-top: 2px solid; border-color: #000000}
+	tbody {border-bottom: 2px solid; border-top: 2px solid;}
+	body {font-family: Verdana, Geneva, sans-serif; font-size: 80%; font-weight: 500;}
+	.num {text-align:right}
+	tr[class^='passed'] td a {color: #009400}
+	tr[class^='skipped'] td a {color: #555555}
+	tr[class^='failed'] td a, .attn {color: #F00000}
+	th {font-weight: bold; background-color: #BBBBBB}
+	div[class='test-event'] {display:none;}
+	table[class='result'] {font-family: monospace; font-size: 100%;}
+	.stacktrace {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+	<table id='suitesummary' title="Filters results based on cell clicked/Shows all result on double-click" duration="102542">
+		<tr>			<th>Test			</th>			<th># Passed			</th>			<th># Skipped			</th>			<th># Failed			</th>			<th>Time (ms)			</th>			<th>Included Groups			</th>			<th>Excluded Groups			</th>		</tr>
+		<tr>			<th colspan="7">PureBroker_Smoke			</th>		</tr>
+		<tr>			<td><a href="#t0">UXP_SS_Sprint11_18691</a>			</td><td class="num">1			</td><td class="num">0			</td><td class="num">0			</td><td class="num">106,484			</td>			<td>			</td>			<td>			</td>		</tr>
+	</table>
+	<table id='summary'>				<thead>		<tr>			<th>Class			</th>			<th>Method			</th>			<th>Start			</th>			<th>Time (ms)			</th>		</tr>	</thead>	<tbody>		<tr>			<th colspan="4">PureBroker_Smoke			</th>		</tr>	</tbody><tbody id="t0">		<tr>			<th colspan="4">UXP_SS_Sprint11_18691 &#8212; passed			</th>		</tr>		<tr class="passedeven"><td rowspan="1">com.davinci_Testscripts.davinci_Script			</td>			<td><a href="#m0">TC_001: Direct debit flow<small><b><i>[chrome_windows]</b></i></small></a>			</td><td rowspan="1">1539257732862			</td><td rowspan="1">102542			</td>		</tr>	</tbody>
+	</table>
+		<h2>UXP_SS_Sprint11_18691</h2><h3 id="m0">com.davinci_Testscripts.davinci_Script#TC_001</h3>	<table class="result">		<tr class="param">			<th>Parameter #1			</th>		</tr>		<tr class="param stripe">			<td>(Browser: chrome, Hub: aspirenav145, Node: ), chrome_XP			</td>		</tr>		<tr>			<th>Messages			</th>		</tr>		<tr>			<td><div class="messages">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Direct debit flow<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_001 [UXP_SS_Sprint11_18691]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;<div class="test-message">&emsp;Davinci url is launched : https://closebo-web-d-ang.davincigroep.be/&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_1.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:33 533 - Page URL:: data:,</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:33 533 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:41 720 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: input[name*='UserName']]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:41 754 - Page URL:: https://adfs01.swf.davincigroep.be/adfs/ls/?wtrealm=https%3a%2f%2fjptest.localhost%2f&wa=wsignin1.0&wreply=https%3a%2f%2fclosebo-web-d-ang.davincigroep.be%2fsignin-wsfed&wctx=cfdj8nkrh99g-pjbpgriki_yftojiqyb5ilv0wcu_jnaycjn-sz0ljllfivv4pd8z7w_hcr8krphah1diws4ty9d9zmxhjcmjgjouwjexhcozf2cxabjql_yrmcxmwhv3mdd9pkvt80d27zsy2vxx2t-blfz5fkkzlxiihmvvsllaq3xan6jmwcjdfzgx5flxhz4zxjruvgrhdubd0vsrdhlqjkslcc5iuqkmp1bpm7ikpc8_jtz0fo0inraun4n8pcf_a</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:41 754 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><div class="test-message">&emsp;Login Page : https://closebo-web-d-ang.davincigroep.be/&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_2.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:42 681 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: input[name*='UserName']]</small> </font> </div><div class="test-message">&emsp;Entered UserName : dvbeswf\closebotestuser&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:42 925 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: input[name*='Password']]</small> </font> </div><div class="test-message">&emsp;Entered Password : Welcome0&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:43 118 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: span.submit]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:00 026 - <b>15</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Login button&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:02 388 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:02 469 - Page URL:: https://closebo-web-d-ang.davincigroep.be/credit/searchcredit</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:02 469 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div><div class="test-message">&emsp;Navigated to Search Credit Page&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_3.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:02 942 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: body > app > shell > section > div > div > div > credit-module > div > search-credit > div > toolbar > div > div > h3]</small> </font> </div><div class="test-message">&emsp;Navigated to Search Credit Page&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_4.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:03 396 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: body > app > shell > section > div > div > div > credit-module > div > search-credit > div > toolbar > div > div > h3]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:03 553 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: p-dropdown[name='ProductFamily'] span]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:05 902 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:08 359 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Selected Type : Consumer loan&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_5.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:08 990 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: #ui-accordiontab-0-content > div > form > div > div.savecancel.morebuttons > button.clickbut.maxwidth50]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:11 410 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Search Button &emsp;</div><div class="test-message">&emsp;mytest3is found&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_6.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:14 411 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;mytest3is found&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_7.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:17 471 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:17 618 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='fa fa-caret-right cursor-hand collapsed ng-star-inserted'][data-target='#832']]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:19 997 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Finance button &emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:22 307 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:25 231 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Selected Type : DIRECT DEBIT&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_8.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:25 684 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='ui-dropdown-trigger ui-state-default ui-corner-right']>span]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:28 069 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:30 533 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Selected Type : Direct Debit&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_9.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:31 239 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: div[class*='col-sm-12 no-padding elementright'] button:nth-child(1)]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:33 636 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked New Button for Direct Debit Mandate&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:33 808 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='DirectDebitNbr']]</small> </font> </div><div class="test-message">&emsp;Entered Credit Reference : 13245&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:34 059 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='IBANAccount']]</small> </font> </div><div class="test-message">&emsp;Entered IBAN Account : BE73103044852060&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:34 383 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='BICCode']>span>input]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:36 945 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;BARBBEBB - BIC code is enterd &emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_10.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:37 399 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: input[name='StartDate']]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:41 127 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Entered the Date date for expected prepayment date : 09/10/2018&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_11.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:41 677 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='clickbut maxwidth30 ng-star-inserted'][type='submit']]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:44 092 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Save Button &emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:44 271 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: div[class*='col-sm-12 no-padding elementright'] button:nth-child(2)]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:46 691 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Update Button for Direct Debit Mandate&emsp;</div><div class="test-message">&emsp;Strat date is disable</div><div class="test-result"><br><font color="red"><strong> Date fields are disable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_12.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<div class="test-message">&emsp;Date fields are disable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_13.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:47 559 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='DirectDebitNbr']]</small> </font> </div><div class="test-message">&emsp;Entered Credit Reference : 132455745&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:47 790 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='clickbut maxwidth30 ng-star-inserted'][type='submit']]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:50 193 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Save Button &emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:50 371 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: div[class*='col-sm-12 no-padding elementright'] button:nth-child(3)]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:52 784 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Close Button for Direct Debit Mandate&emsp;</div><div class="test-message">&emsp;End date is enable[[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: p-calendar[name='EndDate']]</div><div class="test-result"><br><font color="red"><strong> End Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_14.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<div class="test-message">&emsp;End Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_15.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:53 638 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: div[class*='col-sm-12 no-padding elementright'] button:nth-child(4)]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:56 051 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked suspend Button for Direct Debit Mandate&emsp;</div><div class="test-message">&emsp;suspend date is enable[[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: p-calendar[name='SuspendDate']]</div><div class="test-result"><br><font color="red"><strong> Suspend Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_16.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<div class="test-message">&emsp;Suspend Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_17.png" target="_blank" >[ScreenShot]</a></div><div class="test-message">&emsp;until date is enable[[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: p-calendar[name='Until']]</div><div class="test-result"><br><font color="red"><strong> Until Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_18.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;<div class="test-message">&emsp;Until Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_19.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:57 776 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='ui-dropdown-trigger ui-state-default ui-corner-right']>span]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:00 250 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:02 704 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Selected Type : BANK TRANSFER&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_20.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:03 371 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='PaymentReference']]</small> </font> </div><div class="test-message">&emsp;Entered Credit Reference : PaymentReferencetest001&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:03 705 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='CreditIBANAccount']]</small> </font> </div><div class="test-message">&emsp;Entered Credit Reference : NL30ABNA0537284184&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:04 025 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='clickbut maxwidth30 ng-star-inserted'][type='submit']]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:06 406 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Save Button &emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:06 528 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='ui-dropdown-trigger ui-state-default ui-corner-right']>span]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:08 889 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:11 343 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Selected Type : Permanent Order&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_21.png" target="_blank" >[ScreenShot]</a></div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:12 056 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='PaymentReference']]</small> </font> </div><div class="test-message">&emsp;Entered Credit Reference : PaymentReferencetest002&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:12 363 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='CreditIBANAccount']]</small> </font> </div><div class="test-message">&emsp;Entered Credit Reference : NL30ABNA0537284184&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:12 675 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='PermanentOrderAmt']]</small> </font> </div><div class="test-message">&emsp;Entered Credit Reference : 10&emsp;</div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:12 863 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='clickbut maxwidth30 ng-star-inserted'][type='submit']]</small> </font> </div><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:15 279 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div><div class="test-message">&emsp;Clicked Save Button &emsp;</div><div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;</div>			</td>		</tr>	</table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

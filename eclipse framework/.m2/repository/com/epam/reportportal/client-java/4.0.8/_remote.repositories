@@ -1,0 +1,6 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Sat Jan 19 11:46:16 IST 2019
+client-java-4.0.8.jar>bintray=
+client-java-4.0.8.pom>bintray=
+client-java-4.0.8.jar>bintray-epam-reportportal=
+client-java-4.0.8.pom>bintray-epam-reportportal=

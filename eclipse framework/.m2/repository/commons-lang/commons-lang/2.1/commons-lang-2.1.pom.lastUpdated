@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Jul 26 13:22:23 IST 2018
+1ed4835dad55c7ad1b5090d1abfce1a064c38a6e@eproxy.aspiresys.com\:3128>@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1532591543037
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact commons-lang\:commons-lang\:pom\:2.1 from/to central (https\://repo.maven.apache.org/maven2)\: eproxy.aspiresys.com

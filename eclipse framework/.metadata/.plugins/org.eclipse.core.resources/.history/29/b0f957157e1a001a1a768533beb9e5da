@@ -1,0 +1,9 @@
+package com.davinci.pages;
+
+public class ViewMortgageDossierRequestsPage {
+
+	public ViewMortgageDossierRequestsPage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

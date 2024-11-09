@@ -1,0 +1,10 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Jan 22 10:28:29 IST 2019
+https\://jitpack.io/.lastUpdated=1548133109241
+http\://dl.bintray.com/epam/reportportal/.error=
+http\://smartbearsoftware.com/repository/maven2/.error=Could not transfer artifact com.smartbear.soapui\:soapui\:jar\:sources\:5.2.1 from/to smartbear (http\://smartbearsoftware.com/repository/maven2)\: Failed to connect to smartbearsoftware.com/50.57.35.40\:80
+http\://dl.bintray.com/epam/reportportal/.lastUpdated=1548133108218
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1532254496982
+https\://jitpack.io/.error=
+@default-smartbear-http\://smartbearsoftware.com/repository/maven2/.lastUpdated=1532254486612
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.smartbear.soapui\:soapui\:jar\:sources\:5.2.1 from/to central (https\://repo.maven.apache.org/maven2)\: Failed to connect to repo.maven.apache.org/151.101.60.215\:443

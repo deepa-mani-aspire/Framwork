@@ -1,0 +1,7 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Feb 26 12:10:10 IST 2019
+@default-smartbear-sweden-plugin-repository-http\://www.soapui.org/repository/maven2/.lastUpdated=1551163209713
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551163210181
+https\://repository-saucelabs.forge.cloudbees.com/release/.lastUpdated=1551163208692
+http\://www.soapui.org/repository/maven2/.error=Could not transfer artifact org.slf4j\:slf4j-parent\:pom\:1.7.19 from/to smartbear-sweden-plugin-repository (http\://www.soapui.org/repository/maven2/)\: Failed to connect to www.soapui.org/50.57.35.134\:80
+https\://repository-saucelabs.forge.cloudbees.com/release/.error=

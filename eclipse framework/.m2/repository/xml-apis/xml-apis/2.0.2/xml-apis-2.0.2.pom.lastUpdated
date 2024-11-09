@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Feb 27 15:50:08 IST 2019
+@default-smartbear-http\://www.soapui.org/repository/maven2/.lastUpdated=1551262807747
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551262808158
+http\://www.soapui.org/repository/maven2/.error=Could not transfer artifact xml-apis\:xml-apis\:pom\:2.0.2 from/to smartbear (http\://www.soapui.org/repository/maven2/)\: Failed to connect to www.soapui.org/50.57.35.134\:80

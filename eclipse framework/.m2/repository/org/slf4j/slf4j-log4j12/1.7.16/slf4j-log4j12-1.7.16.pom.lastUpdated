@@ -1,0 +1,9 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Feb 26 12:05:56 IST 2019
+https\://jitpack.io/.lastUpdated=1551162953925
+http\://dl.bintray.com/epam/reportportal/.error=
+http\://smartbearsoftware.com/repository/maven2/.error=Could not transfer artifact org.slf4j\:slf4j-log4j12\:pom\:1.7.16 from/to smartbear (http\://smartbearsoftware.com/repository/maven2)\: Failed to connect to smartbearsoftware.com/50.57.35.40\:80
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551162956428
+http\://dl.bintray.com/epam/reportportal/.lastUpdated=1551162953537
+https\://jitpack.io/.error=
+@default-smartbear-http\://smartbearsoftware.com/repository/maven2/.lastUpdated=1551162955141

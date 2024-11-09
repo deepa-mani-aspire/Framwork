@@ -1,0 +1,9 @@
+package com.davinci.pages;
+
+public class ViewLinkDirtyPaymentsPage {
+
+	public ViewLinkDirtyPaymentsPage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

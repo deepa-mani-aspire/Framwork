@@ -1,0 +1,7 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Thu Jan 31 17:49:53 IST 2019
+maven-plugin-api-2.0-javadoc.jar>central=
+maven-plugin-api-2.0.jar>smartbear=
+maven-plugin-api-2.0.pom>smartbear=
+maven-plugin-api-2.0.pom>smartbear-sweden-plugin-repository=
+maven-plugin-api-2.0-sources.jar>central=

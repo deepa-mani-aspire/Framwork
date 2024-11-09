@@ -1,0 +1,9 @@
+package com.davinci.pages;
+
+public class ValidatePaymentsPage {
+
+	public ValidatePaymentsPage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

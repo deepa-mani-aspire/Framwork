@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.redfish4ktc.soapui</groupId>
+  <artifactId>soapui</artifactId>
+  <version>4.0.1.0</version>
+  <packaging>jar</packaging>
+  <name>soapUI</name>
+  <description>The main soapUI project</description>
+  <url>http://www.soapui.org</url>
+
+  <licenses>
+    <license>
+      <name>GNU Library or Lesser General Public License (LGPL)</name>
+      <url>http://www.gnu.org/licenses/lgpl.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git@github.com:SmartBear/soapui.git</connection>
+    <developerConnection>scm:git:git@github.com:SmartBear/soapui.git</developerConnection>
+    <url>https://github.com/SmartBear/soapui</url>
+  </scm>
+  <developers>
+    <developer>
+      <name>Ole Lensmar</name>
+      <id>olensmar</id>
+    </developer>
+  </developers>
+
+</project>

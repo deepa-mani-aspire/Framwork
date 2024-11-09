@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Aug 01 19:27:21 IST 2018
+http\://smartbearsoftware.com/repository/maven2/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-java\:pom\:3.7.1 from/to smartbear (http\://smartbearsoftware.com/repository/maven2)\: Failed to connect to smartbearsoftware.com/50.57.35.40\:80
+http\://www.soapui.org/repository/maven2/.lastUpdated=1533131841209
+https\://repo.maven.apache.org/maven2/.lastUpdated=1533131841734
+http\://www.soapui.org/repository/maven2/.error=
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1532531632251
+@default-smartbear-http\://smartbearsoftware.com/repository/maven2/.lastUpdated=1532531622030

@@ -1,0 +1,110 @@
+10-Dec-2019 14:41:09:900 INFO  [DataUtils] Data utils base path: D:\eclipse workspace\SSP_EC_Suite\src\main\resources\testdata\ 
+10-Dec-2019 14:41:10:113 INFO  [PoolService-0]  
+10-Dec-2019 14:41:10:114 INFO  [PoolService-0] ****             Direct debit flow<small><b><i>[chrome_windows]</b></i></small>             ***** 
+10-Dec-2019 14:41:10:114 INFO  [PoolService-0]  
+10-Dec-2019 14:41:10:114 INFO  [PoolService-0]  
+10-Dec-2019 14:41:10:115 INFO  [PoolService-0] ****             TC_001 [UXP_SS_Sprint11_18691]             ***** 
+10-Dec-2019 14:41:10:115 INFO  [PoolService-0]  
+10-Dec-2019 14:41:10:423 INFO  [PoolService-0] Davinci url is launched : https://closebo-web-q8.davincigroep.be/ 
+10-Dec-2019 14:41:10:463 DEBUG [PoolService-0] Page URL:: data:, 
+10-Dec-2019 14:41:10:463 DEBUG [PoolService-0] Page Load Wait: (Sync) 
+10-Dec-2019 14:41:13:969 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> css selector: input[name*='UserName']] 
+10-Dec-2019 14:41:14:000 DEBUG [PoolService-0] Page URL:: https://adfs01.swf.davincigroep.be/adfs/ls/?wtrealm=https%3a%2f%2fjptest.localhost%2f&wa=wsignin1.0&wreply=https%3a%2f%2fclosebo-web-q8.davincigroep.be%2fsignin-wsfed&wctx=cfdj8ls4dk2d5ahcse-ajydfc1o47tsvhapzfqnaxigukfpjpiemls3qgsxcl19nndvybu-d8xvttm4qcralr32hklc-zxl5sqngh7ayl08ljtr6luvvv3lv7he4pimnb-iatidcmvlsayhdmc-p4nuwukihom1tjscbr-0wmp0ubjlajgkpso70eu8hew-nb7ehbrgchpiu8gnkmo2k0jbp6zssjz7bliyb1tzgjnzg5ilbshlooxdvallj8lwbyxi8zq 
+10-Dec-2019 14:41:14:000 DEBUG [PoolService-0] Page Load Wait: (Sync) 
+10-Dec-2019 14:41:14:721 INFO  [PoolService-0] Login Page : https://closebo-web-q8.davincigroep.be/ 
+10-Dec-2019 14:41:14:803 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> css selector: input[name*='UserName']] 
+10-Dec-2019 14:41:14:898 INFO  [PoolService-0] Entered UserName : dvbeswf\rpandian 
+10-Dec-2019 14:41:14:988 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> css selector: input[name*='Password']] 
+10-Dec-2019 14:41:15:075 INFO  [PoolService-0] Entered Password : Password@8766 
+10-Dec-2019 14:41:15:166 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> css selector: span.submit] 
+10-Dec-2019 14:41:28:319 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:41:28:320 INFO  [PoolService-0] Clicked Login button 
+10-Dec-2019 14:41:30:608 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:41:30:635 DEBUG [PoolService-0] Page URL:: https://closebo-web-q8.davincigroep.be/ 
+10-Dec-2019 14:41:30:635 DEBUG [PoolService-0] Page Load Wait: (Sync) 
+10-Dec-2019 14:41:30:894 INFO  [PoolService-0] Navigated to Search Credit Page 
+10-Dec-2019 14:41:30:987 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: //h4[contains(text(),'280 Select session')]] 
+10-Dec-2019 14:41:31:252 INFO  [PoolService-0] Navigated to Search Credit Page 
+10-Dec-2019 14:41:31:335 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: //h4[contains(text(),'280 Select session')]] 
+10-Dec-2019 14:41:31:428 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/app-session/div/div/div/button[1]] 
+10-Dec-2019 14:41:33:749 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:41:33:749 INFO  [PoolService-0] Clicked ConsumerAndMortgagaeLending session 
+10-Dec-2019 14:41:34:032 INFO  [PoolService-0] Navigated to Search Credit Page 
+10-Dec-2019 14:41:34:126 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-credit/div/tool-bar/div/div/h3] 
+10-Dec-2019 14:41:34:412 INFO  [PoolService-0] Navigated to Search Credit Page 
+10-Dec-2019 14:41:34:492 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-credit/div/tool-bar/div/div/h3] 
+10-Dec-2019 14:41:36:790 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:42:07:648 DEBUG [PoolService-0] Unable to find a element after 30 sec ==> Proxy element for: DefaultElementLocator 'By.xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-credit/div/tool-bar/div/div/h3' 
+10-Dec-2019 14:42:07:909 INFO  [PoolService-0] Selected Type : Search Buy To Let  
+10-Dec-2019 14:42:08:176 INFO  [PoolService-0] Navigated to Search Buy To let Page 
+10-Dec-2019 14:42:08:309 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-buy-to-let/div/tool-bar/div/div/h3] 
+10-Dec-2019 14:42:10:646 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:42:41:777 DEBUG [PoolService-0] Unable to find a element after 30 sec ==> Proxy element for: DefaultElementLocator 'By.xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-buy-to-let/div/tool-bar/div/div/h3' 
+10-Dec-2019 14:42:42:087 INFO  [PoolService-0] Selected Type : Link Dirty Payments  
+10-Dec-2019 14:42:42:386 INFO  [PoolService-0] Navigated to Link Dirty Payments Page 
+10-Dec-2019 14:43:12:927 DEBUG [PoolService-0] Unable to find a element after 30 sec ==> Proxy element for: DefaultElementLocator 'By.xpath: //*[@id=navbar]/ul[1]/li[1]/div/ul/li[3]/a' 
+10-Dec-2019 14:43:13:038 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/link-dirty-payments/div[2]/form/tool-bar/div/div/div/button[2]/span] 
+10-Dec-2019 14:43:15:530 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:43:15:531 INFO  [PoolService-0] Clicked close Button  
+10-Dec-2019 14:43:17:867 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:43:48:917 DEBUG [PoolService-0] Unable to find a element after 30 sec ==> Proxy element for: DefaultElementLocator 'By.xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-credit/div/tool-bar/div/div/h3' 
+10-Dec-2019 14:43:49:177 INFO  [PoolService-0] Selected Type : Link Dirty Payments  
+10-Dec-2019 14:43:49:471 INFO  [PoolService-0] Navigated to View Link Dirty Payments Page 
+10-Dec-2019 14:43:49:560 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/view-link-dirty-payment/div/form/tool-bar/div/div/h3] 
+10-Dec-2019 14:43:49:658 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/view-link-dirty-payment/div/form/tool-bar/div/div/div/button/span] 
+10-Dec-2019 14:43:52:099 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:43:52:100 INFO  [PoolService-0] Clicked close Button  
+10-Dec-2019 14:43:54:426 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:44:24:959 DEBUG [PoolService-0] Unable to find a element after 30 sec ==> Proxy element for: DefaultElementLocator 'By.xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-credit/div/tool-bar/div/div/h3' 
+10-Dec-2019 14:44:25:257 INFO  [PoolService-0] Selected Type : Link Dirty Payments  
+10-Dec-2019 14:44:25:565 INFO  [PoolService-0] Navigated to  Validate Payments Page 
+10-Dec-2019 14:44:25:655 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/validate-payments/div/form/tool-bar/div/div/h3] 
+10-Dec-2019 14:44:25:753 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/validate-payments/div/form/tool-bar/div/div/div/button[2]/span] 
+10-Dec-2019 14:44:28:193 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:44:28:195 INFO  [PoolService-0] Clicked close Button  
+10-Dec-2019 14:44:30:531 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:45:01:525 DEBUG [PoolService-0] Unable to find a element after 30 sec ==> Proxy element for: DefaultElementLocator 'By.xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-credit/div/tool-bar/div/div/h3' 
+10-Dec-2019 14:45:01:842 INFO  [PoolService-0] Selected Type : Link Dirty Payments  
+10-Dec-2019 14:45:02:148 INFO  [PoolService-0] Navigated to View Mortgage Dossier Requests Page 
+10-Dec-2019 14:45:02:231 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/view-mortgage-dossier-requests/div/form/tool-bar/div/div/h3] 
+10-Dec-2019 14:45:02:326 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/view-mortgage-dossier-requests/div/form/tool-bar/div/div/div/button[2]/span] 
+10-Dec-2019 14:45:04:735 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:45:04:736 INFO  [PoolService-0] Clicked Close Button  
+10-Dec-2019 14:45:07:070 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:45:37:699 DEBUG [PoolService-0] Unable to find a element after 30 sec ==> Proxy element for: DefaultElementLocator 'By.xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-credit/div/tool-bar/div/div/h3' 
+10-Dec-2019 14:45:37:954 INFO  [PoolService-0] Selected Type : Link Dirty Payments  
+10-Dec-2019 14:45:38:243 INFO  [PoolService-0] Navigated to Search Declarations Page 
+10-Dec-2019 14:45:38:338 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-depot-declaration/div/tool-bar/div/div/h3] 
+10-Dec-2019 14:45:38:434 DEBUG [PoolService-0] Element is displayed:: [[RemoteWebDriver: chrome on XP (aea75599-cd84-4dae-9fb7-a2ace53b89b1)] -> xpath: /html/body/app-component/app-shell/section/div/div/div/credit-module/div/search-depot-declaration/div/tool-bar/div/div/div/button/span] 
+10-Dec-2019 14:45:40:839 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:45:40:839 INFO  [PoolService-0] Clicked close Button  
+10-Dec-2019 14:45:43:155 DEBUG [PoolService-0] Spinner Load Wait: (Sync) 
+10-Dec-2019 14:45:43:710 FATAL [PoolService-0] Unable to locate AdministrativeHistoryOverview screen : org.openqa.selenium.WebDriverException: unknown error: Element <a _ngcontent-c1="" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" role="button" title="MANAGE CREDIT">...</a> is not clickable at point (431, 39). Other element would receive the click: <div _ngcontent-c1="" class="overlay-div" id="Shell" style="">...</div> 
+java.lang.Exception: Unable to locate AdministrativeHistoryOverview screen : org.openqa.selenium.WebDriverException: unknown error: Element <a _ngcontent-c1="" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" role="button" title="MANAGE CREDIT">...</a> is not clickable at point (431, 39). Other element would receive the click: <div _ngcontent-c1="" class="overlay-div" id="Shell" style="">...</div>
+  (Session info: chrome=78.0.3904.108)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 36 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Aspire1543', ip: '172.24.166.252', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\RAMYA~1.PAN\AppData\Local\Temp\scoped_dir20340_29237}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=78.0.3904.108, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 3051332e4cc5e4ebff5925562628b8aa
+Command duration or timeout: 195 milliseconds
+	at com.davinci.pages.SearchCreditPage.navigateToAdministrativeHistoryOverview(SearchCreditPage.java:441)
+	at com.davinci_Testscripts.davinci_Script.TC_001(davinci_Script.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+10-Dec-2019 14:45:43:712 INFO  [PoolService-0] ****             -E---N---D-             ***** 

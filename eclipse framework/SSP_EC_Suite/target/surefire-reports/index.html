@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-PureBroker_Smoke">
+              <span class="suite-name border-passed">PureBroker_Smoke</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-PureBroker_Smoke">
+                    <span>H:\Test_Script\Anguler_POC\testxml\UXP_Pure_Smoke_StagingPhase2.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-PureBroker_Smoke">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-PureBroker_Smoke">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-PureBroker_Smoke">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-PureBroker_Smoke">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-PureBroker_Smoke">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-PureBroker_Smoke">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-PureBroker_Smoke" class="hide-methods passed suite-PureBroker_Smoke"> (hide)</a> <!-- hide-methods passed suite-PureBroker_Smoke -->
+                      <a href="#" panel-name="suite-PureBroker_Smoke" class="show-methods passed suite-PureBroker_Smoke"> (show)</a> <!-- show-methods passed suite-PureBroker_Smoke -->
+                    </span>
+                    <div class="method-list-content passed suite-PureBroker_Smoke">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-PureBroker_Smoke" title="com.davinci_Testscripts.davinci_Script" hash-for-method="TC_001((Browser: chrome, Hub: aspirenav145, Node: ), chrome_XP)">TC_001((Browser: chrome, Hub: aspirenav145, Node: ), chrome_XP)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-PureBroker_Smoke -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-PureBroker_Smoke" class="panel PureBroker_Smoke">
+          <div class="suite-PureBroker_Smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.davinci_Testscripts.davinci_Script</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_001((Browser: chrome, Hub: aspirenav145, Node: ), chrome_XP)">
+                  </a> <!-- TC_001((Browser: chrome, Hub: aspirenav145, Node: ), chrome_XP) -->
+                  <span class="method-name">TC_001</span>
+                  <span class="parameters">((Browser: chrome, Hub: aspirenav145, Node: ), chrome_XP)</span>
+                  <em>
+(Direct debit flow)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-PureBroker_Smoke-class-passed -->
+        </div> <!-- panel PureBroker_Smoke -->
+        <div panel-name="test-xml-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">H:\Test_Script\Anguler_POC\testxml\UXP_Pure_Smoke_StagingPhase2.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;3&quot; name=&quot;PureBroker_Smoke&quot; parallel=&quot;methods&quot;&gt;
+  &lt;parameter name=&quot;webSite&quot; value=&quot;https://closebo-web-d-ang.davincigroep.be/&quot;/&gt;
+  &lt;parameter name=&quot;deviceHost&quot; value=&quot;localhost&quot;/&gt;
+  &lt;parameter name=&quot;os&quot; value=&quot;Windows&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;os_version&quot; value=&quot;7&quot;/&gt;
+  &lt;parameter name=&quot;devicePort&quot; value=&quot;8085&quot;/&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;chrome_windows&quot;/&gt;
+  &lt;parameter name=&quot;browser_version&quot; value=&quot;62&quot;/&gt;
+  &lt;parameter name=&quot;env&quot; value=&quot;davinci&quot;/&gt;
+  &lt;parameter name=&quot;securityTest&quot; value=&quot;false&quot;/&gt;
+  &lt;test thread-count=&quot;1&quot; verbose=&quot;3&quot; name=&quot;UXP_SS_Sprint11_18691&quot; parallel=&quot;methods&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.davinci_Testscripts.davinci_Script&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TC_001&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.davinci_Testscripts.davinci_Script --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- UXP_SS_Sprint11_18691 --&gt;
+&lt;/suite&gt; &lt;!-- PureBroker_Smoke --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for PureBroker_Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">UXP_SS_Sprint11_18691 (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for PureBroker_Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for PureBroker_Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_PureBroker_Smoke');
+function tableData_PureBroker_Smoke() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TC_001')
+data.setCell(0, 2, 'com.davinci_Testscripts.davinci_Script')
+data.setCell(0, 3, 102542);
+window.suiteTableData['PureBroker_Smoke']= { tableData: data, tableDiv: 'times-div-PureBroker_Smoke'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-PureBroker_Smoke">
+              </div> <!-- times-div-PureBroker_Smoke -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for PureBroker_Smoke</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">TC_001((Browser: chrome, Hub: aspirenav145, Node: ), chrome_XP)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">Direct debit flow<small><b><i>[chrome_windows]</b></i></small></font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->&emsp;</span>
+                <span class="reporter-method-output">&emsp;<div class="test-title"> <strong><font size = "3" color = "#000080">TC_001 [UXP_SS_Sprint11_18691]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Davinci url is launched : https://closebo-web-d-ang.davincigroep.be/&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_1.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:33 533 - Page URL:: data:,</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:33 533 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:41 720 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: input[name*='UserName']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:41 754 - Page URL:: https://adfs01.swf.davincigroep.be/adfs/ls/?wtrealm=https%3a%2f%2fjptest.localhost%2f&wa=wsignin1.0&wreply=https%3a%2f%2fclosebo-web-d-ang.davincigroep.be%2fsignin-wsfed&wctx=cfdj8nkrh99g-pjbpgriki_yftojiqyb5ilv0wcu_jnaycjn-sz0ljllfivv4pd8z7w_hcr8krphah1diws4ty9d9zmxhjcmjgjouwjexhcozf2cxabjql_yrmcxmwhv3mdd9pkvt80d27zsy2vxx2t-blfz5fkkzlxiihmvvsllaq3xan6jmwcjdfzgx5flxhz4zxjruvgrhdubd0vsrdhlqjkslcc5iuqkmp1bpm7ikpc8_jtz0fo0inraun4n8pcf_a</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:41 754 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Login Page : https://closebo-web-d-ang.davincigroep.be/&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_2.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:42 681 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: input[name*='UserName']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered UserName : dvbeswf\closebotestuser&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:42 925 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: input[name*='Password']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered Password : Welcome0&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:05:43 118 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: span.submit]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:00 026 - <b>15</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Login button&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:02 388 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:02 469 - Page URL:: https://closebo-web-d-ang.davincigroep.be/credit/searchcredit</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:02 469 - <b>0</b> - Page Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForPageLoad(WaitUtils.java:338)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Navigated to Search Credit Page&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_3.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:02 942 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: body > app > shell > section > div > div > div > credit-module > div > search-credit > div > toolbar > div > div > h3]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Navigated to Search Credit Page&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_4.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:03 396 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: body > app > shell > section > div > div > div > credit-module > div > search-credit > div > toolbar > div > div > h3]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:03 553 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: p-dropdown[name='ProductFamily'] span]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:05 902 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:08 359 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Selected Type : Consumer loan&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_5.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:08 990 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: #ui-accordiontab-0-content > div > form > div > div.savecancel.morebuttons > button.clickbut.maxwidth50]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:11 410 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Search Button &emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;mytest3is found&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_6.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:14 411 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;mytest3is found&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_7.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:17 471 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:17 618 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='fa fa-caret-right cursor-hand collapsed ng-star-inserted'][data-target='#832']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:19 997 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Finance button &emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:22 307 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:25 231 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Selected Type : DIRECT DEBIT&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_8.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:25 684 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='ui-dropdown-trigger ui-state-default ui-corner-right']>span]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:28 069 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:30 533 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Selected Type : Direct Debit&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_9.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:31 239 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: div[class*='col-sm-12 no-padding elementright'] button:nth-child(1)]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:33 636 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked New Button for Direct Debit Mandate&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:33 808 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='DirectDebitNbr']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered Credit Reference : 13245&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:34 059 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='IBANAccount']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered IBAN Account : BE73103044852060&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:34 383 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='BICCode']>span>input]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:36 945 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;BARBBEBB - BIC code is enterd &emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_10.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:37 399 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: input[name='StartDate']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:41 127 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered the Date date for expected prepayment date : 09/10/2018&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_11.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:41 677 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='clickbut maxwidth30 ng-star-inserted'][type='submit']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:44 092 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Save Button &emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:44 271 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: div[class*='col-sm-12 no-padding elementright'] button:nth-child(2)]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:46 691 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Update Button for Direct Debit Mandate&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Strat date is disable</div></span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="red"><strong> Date fields are disable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_12.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Date fields are disable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_13.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:47 559 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='DirectDebitNbr']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered Credit Reference : 132455745&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:47 790 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='clickbut maxwidth30 ng-star-inserted'][type='submit']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:50 193 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Save Button &emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:50 371 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: div[class*='col-sm-12 no-padding elementright'] button:nth-child(3)]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:52 784 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Close Button for Direct Debit Mandate&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;End date is enable[[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: p-calendar[name='EndDate']]</div></span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="red"><strong> End Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_14.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;End Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_15.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:53 638 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: div[class*='col-sm-12 no-padding elementright'] button:nth-child(4)]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:56 051 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked suspend Button for Direct Debit Mandate&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;suspend date is enable[[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: p-calendar[name='SuspendDate']]</div></span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="red"><strong> Suspend Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_16.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Suspend Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_17.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;until date is enable[[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: p-calendar[name='Until']]</div></span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="red"><strong> Until Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_18.png" target="_blank" >[ScreenShot]</a> </strong></font> </div>&emsp;</span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Until Date fields are enable&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_19.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:06:57 776 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='ui-dropdown-trigger ui-state-default ui-corner-right']>span]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:00 250 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:02 704 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Selected Type : BANK TRANSFER&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_20.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:03 371 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='PaymentReference']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered Credit Reference : PaymentReferencetest001&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:03 705 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='CreditIBANAccount']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered Credit Reference : NL30ABNA0537284184&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:04 025 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='clickbut maxwidth30 ng-star-inserted'][type='submit']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:06 406 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Save Button &emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:06 528 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='ui-dropdown-trigger ui-state-default ui-corner-right']>span]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:08 889 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:11 343 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Selected Type : Permanent Order&emsp;<a href=".\ScreenShot\TC_001_UXP_SS_Sprint11_18691_21.png" target="_blank" >[ScreenShot]</a></div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:12 056 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='PaymentReference']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered Credit Reference : PaymentReferencetest002&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:12 363 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='CreditIBANAccount']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered Credit Reference : NL30ABNA0537284184&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:12 675 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [name='PermanentOrderAmt']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Entered Credit Reference : 10&emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:12 863 - Element is displayed:: [[RemoteWebDriver: chrome on XP (7d8617062babb3c764eadb9c07e5ef8c)] -> css selector: [class*='clickbut maxwidth30 ng-star-inserted'][type='submit']]</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 11 Oct 17:07:15 279 - <b>2</b> - Spinner Load Wait: (Sync) - com.generic.utils.WaitUtils.waitForSpinner(WaitUtils.java:160)</small> </font> </div></span>
+                <span class="reporter-method-output"><div class="test-message">&emsp;Clicked Save Button &emsp;</div></span>
+                <span class="reporter-method-output"><div class="test-result"><br><font color="green"><strong> Test Passed. </strong></font> </div>&emsp;</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">2 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.davinci_Testscripts.davinci_Script</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TC_003</span>
+                <br/>
+                <span class="ignored-method-name">TC_002</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-PureBroker_Smoke" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.davinci_Testscripts.davinci_Script</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">init(org.testng.TestRunner@333291e3)</span>
+                <span class="method-start">156 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">TC_001((Browser: chrome, Hub: aspirenav145, Node: ), chrome_XP)</span>
+                <span class="method-start">4083 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">106657 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

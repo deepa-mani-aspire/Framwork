@@ -1,0 +1,10 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Fri Jan 11 19:10:26 IST 2019
+https\://jitpack.io/.lastUpdated=1547214026111
+http\://dl.bintray.com/epam/reportportal/.error=
+http\://smartbearsoftware.com/repository/maven2/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-api\:jar\:sources\:3.6.0 from/to smartbear (http\://smartbearsoftware.com/repository/maven2)\: Failed to connect to smartbearsoftware.com/50.57.35.40\:80
+http\://dl.bintray.com/epam/reportportal/.lastUpdated=1547214024820
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1532527563837
+https\://jitpack.io/.error=
+@default-smartbear-http\://smartbearsoftware.com/repository/maven2/.lastUpdated=1532527553539
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-api\:jar\:sources\:3.6.0 from/to central (https\://repo.maven.apache.org/maven2)\: Failed to connect to repo.maven.apache.org/151.101.52.215\:443

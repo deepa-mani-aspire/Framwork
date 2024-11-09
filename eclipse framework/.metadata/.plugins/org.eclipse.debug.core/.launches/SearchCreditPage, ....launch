@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+    <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+        <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SSP_EC_Suite"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+    <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS">
+        <mapEntry key="NewTest" value=""/>
+        <mapEntry key="com.davinci.pages.GetTestData" value=""/>
+        <mapEntry key="com.davinci.pages.LoginPage" value=""/>
+        <mapEntry key="com.davinci.pages.SearchCreditPage" value=""/>
+        <mapEntry key="com.davinci_Testscripts.davinci_Script" value=""/>
+        <mapEntry key="com.generic.support.BaseTest" value=""/>
+        <mapEntry key="com.generic.support.ConnectDB" value=""/>
+        <mapEntry key="com.generic.support.DateTimeUtility" value=""/>
+        <mapEntry key="com.generic.support.EmailReport" value=""/>
+        <mapEntry key="com.generic.support.EnvironmentPropertiesReader" value=""/>
+        <mapEntry key="com.generic.support.ExtentReporter" value=""/>
+        <mapEntry key="com.generic.support.FolderZiper" value=""/>
+        <mapEntry key="com.generic.support.Keyboard" value=""/>
+        <mapEntry key="com.generic.support.Log" value=""/>
+        <mapEntry key="com.generic.support.ScreenshotManager" value=""/>
+        <mapEntry key="com.generic.support.StopWatch" value=""/>
+        <mapEntry key="com.generic.support.WebDriverFactory" value=""/>
+        <mapEntry key="com.generic.utils.DataProviderUtils" value=""/>
+        <mapEntry key="com.generic.utils.DataUtils" value=""/>
+        <mapEntry key="com.generic.utils.ElementLayer" value=""/>
+        <mapEntry key="com.generic.utils.FileUtils" value=""/>
+        <mapEntry key="com.generic.utils.GenericUtils" value=""/>
+        <mapEntry key="com.generic.utils.WaitUtils" value=""/>
+    </mapAttribute>
+    <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+        <listEntry value="com.generic.support.ConnectDB"/>
+        <listEntry value="com.generic.support.ScreenshotManager"/>
+        <listEntry value="com.davinci.pages.GetTestData"/>
+        <listEntry value="com.generic.support.EmailReport"/>
+        <listEntry value="com.generic.utils.ElementLayer"/>
+        <listEntry value="com.generic.utils.GenericUtils"/>
+        <listEntry value="com.generic.utils.DataUtils"/>
+        <listEntry value="com.generic.utils.FileUtils"/>
+        <listEntry value="com.generic.support.FolderZiper"/>
+        <listEntry value="com.generic.support.BaseTest"/>
+        <listEntry value="com.generic.support.ExtentReporter"/>
+        <listEntry value="com.generic.support.WebDriverFactory"/>
+        <listEntry value="com.davinci.pages.SearchCreditPage"/>
+        <listEntry value="NewTest"/>
+        <listEntry value="com.generic.utils.DataProviderUtils"/>
+        <listEntry value="com.generic.utils.WaitUtils"/>
+        <listEntry value="com.generic.support.StopWatch"/>
+        <listEntry value="com.generic.support.Log"/>
+        <listEntry value="com.davinci.pages.LoginPage"/>
+        <listEntry value="com.generic.support.Keyboard"/>
+        <listEntry value="com.davinci_Testscripts.davinci_Script"/>
+        <listEntry value="com.generic.support.EnvironmentPropertiesReader"/>
+        <listEntry value="com.generic.support.DateTimeUtility"/>
+    </listAttribute>
+    <booleanAttribute key="org.testng.eclipse.DEBUG" value="false"/>
+    <listAttribute key="org.testng.eclipse.GROUP_LIST"/>
+    <listAttribute key="org.testng.eclipse.GROUP_LIST_CLASS"/>
+    <stringAttribute key="org.testng.eclipse.LOG_LEVEL" value="2"/>
+    <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+    <listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+    <stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+    <stringAttribute key="org.testng.eclipse.PROTOCOL" value="json"/>
+    <intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+    <booleanAttribute key="org.testng.eclipse.VERBOSE" value="false"/>
+</launchConfiguration>

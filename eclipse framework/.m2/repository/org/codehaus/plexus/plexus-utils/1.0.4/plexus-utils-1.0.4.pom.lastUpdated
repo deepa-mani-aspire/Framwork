@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Feb 27 15:32:22 IST 2019
+@default-smartbear-sweden-plugin-repository-http\://www.soapui.org/repository/maven2/.lastUpdated=1551261742583
+https\://repo.maven.apache.org/maven2/.lastUpdated=1551261742992
+http\://www.soapui.org/repository/maven2/.error=Could not transfer artifact org.codehaus.plexus\:plexus-utils\:pom\:1.0.4 from/to smartbear-sweden-plugin-repository (http\://www.soapui.org/repository/maven2)\: Failed to connect to www.soapui.org/50.57.35.134\:80

@@ -1,0 +1,9 @@
+package com.davinci.pages;
+
+public class SearchDeclarationsPage {
+
+	public SearchDeclarationsPage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [PureBroker_Smoke]" parallel="methods">
+  <parameter name="webSite" value="https://closebo-web-q8.davincigroep.be/"/>
+  <parameter name="deviceHost" value="localhost"/>
+  <parameter name="os" value="Windows"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="os_version" value="7"/>
+  <parameter name="devicePort" value="4444"/>
+  <parameter name="browserName" value="chrome_windows"/>
+  <parameter name="browser_version" value="75"/>
+  <parameter name="env" value="davinci"/>
+  <parameter name="securityTest" value="false"/>
+  <test name="UXP_SS_Sprint11_18691(failed)" parallel="methods">
+    <classes>
+      <class name="com.davinci_Testscripts.davinci_Script">
+        <methods>
+          <include name="init"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="TC_001" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.davinci_Testscripts.davinci_Script -->
+    </classes>
+  </test> <!-- UXP_SS_Sprint11_18691(failed) -->
+</suite> <!-- Failed suite [PureBroker_Smoke] -->

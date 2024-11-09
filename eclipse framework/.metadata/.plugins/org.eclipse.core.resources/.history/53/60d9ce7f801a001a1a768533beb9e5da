@@ -1,0 +1,9 @@
+package com.davinci.pages;
+
+public class SearchIncomingPaymentsPage {
+
+	public SearchIncomingPaymentsPage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
